@@ -13,8 +13,8 @@ Example developed as a test for backend vacancy at Docket
 
 
 ## Mysql configuration
-Create database with the name cartoriodb
-Go to the `application.properties` file and configure your `spring.datasource.username` and spring.datasource.password`.
+Create database with the name `cartoriodb`
+Go to the `application.properties` file and configure your `spring.datasource.username` and `spring.datasource.password`.
 
 ## Run the project
 

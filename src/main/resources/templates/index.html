@@ -17,17 +17,27 @@
         <thead>
             <tr>
                 <th>Nome do Cartório</th>
-                <th>Endereço</th>
+                <th>Logradouro</th>
+                <th>Número</th>
+                <th>Bairro</th>
+                <th>Cep</th>
+                <th>Cidade</th>
+                <th>UF</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="cartorio : ${listCartorios}">
                 <td th:text="${cartorio.nome}"></td>
-                <td th:text="${cartorio.logradouro} + ', ' + ${cartorio.numero} + ', ' + ${cartorio.bairro} + ', ' + ${cartorio.cep} + ', ' + ${cartorio.cidade} + ', ' + ${cartorio.uf}"></td>
+                <td th:text="${cartorio.logradouro}"></td>
+                <td th:text="${cartorio.numero}"></td>
+                <td th:text="${cartorio.bairro}"></td>
+                <td th:text="${cartorio.cep}"></td>
+                <td th:text="${cartorio.cidade}"></td>
+                <td th:text="${cartorio.uf}"></td>
                 <td>
-                    <a th:href="@{/showFormForUpdate/{id}(id=${cartorio.id})}" class="btn btn-primary">Update</a>
-                    <a th:href="@{/deleteCartorio/{id}(id=${cartorio.id})}" class="btn btn-danger">Delete</a>
+                    <a th:href="@{/showFormForUpdate/{id}(id=${cartorio.id})}" class="btn btn-primary">Editar</a>
+                    <a th:href="@{/deleteCartorio/{id}(id=${cartorio.id})}" class="btn btn-danger">Deletar</a>
                 </td>
             </tr>
         </tbody>
