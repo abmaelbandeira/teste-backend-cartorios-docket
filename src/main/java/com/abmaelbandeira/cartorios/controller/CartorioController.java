@@ -25,11 +25,11 @@ public class CartorioController {
     public String showNewCartorioForm(Model model){
         Cartorio cartorio = new Cartorio();
         model.addAttribute("cartorio", cartorio);
-        return "new_catorio";
+        return "new_cartorio";
     }
 
     @PostMapping("/saveCartorio")
-    public String saveCatorio(@ModelAttribute("cartorio") Cartorio cartorio){
+    public String saveCartorio(@ModelAttribute("cartorio") Cartorio cartorio){
         // save cartorio to database
         cartorioService.saveCartorio(cartorio);
         return "redirect:/";

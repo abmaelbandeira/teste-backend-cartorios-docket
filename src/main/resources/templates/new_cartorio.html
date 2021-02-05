@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartórios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Cartórios</h1>
+        <hr>
+        <h2>Novo Cartório</h2>
+
+        <form action="#" th:action="@{/saveCartorio}" th:object="${cartorio}" method="POST">
+            <input type="text" th:field = "*{nome}" placeholder="Nome do Cartório" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{logradouro}" placeholder="Logradouro" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{numero}" placeholder="Número" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{bairro}" placeholder="Bairro" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{cep}" placeholder="Cep" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{cidade}" placeholder="Cidade" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{uf}" placeholder="UF" class="form-control mb-4 col-4">
+
+            <button type="submit" class="btn btn-info col-2">Salvar Cartório</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartórios</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-2">
+    <h1>Cartórios</h1>
+    <a th:href = "@{/showNewCartorioForm}" class="btn btn-primary btn-sm mb-3">Adicionar Cartório</a>
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+            <tr>
+                <th>Nome do Cartório</th>
+                <th>Endereço</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cartorio : ${listCartorios}">
+                <td th:text="${cartorio.nome}"></td>
+                <td th:text="${cartorio.logradouro} + ', ' + ${cartorio.numero} + ', ' + ${cartorio.bairro} + ', ' + ${cartorio.cep} + ', ' + ${cartorio.cidade} + ', ' + ${cartorio.uf}"></td>
+                <td>
+                    <a th:href="@{/showFormForUpdate/{id}(id=${cartorio.id})}" class="btn btn-primary">Update</a>
+                    <a th:href="@{/deleteCartorio/{id}(id=${cartorio.id})}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

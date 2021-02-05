@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartórios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Cartórios</h1>
+    <hr>
+    <h2>Atualizar Cartório</h2>
+
+    <form action="#" th:action="@{/saveCartorio}" th:object="${cartorio}" method="POST">
+
+        <!-- Add hidden form field to handle update -->
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field = "*{nome}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{logradouro}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{numero}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{bairro}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{cep}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{cidade}" class="form-control mb-4 col-4">
+        <input type="text" th:field = "*{uf}" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Atualizar Cartório</button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/}">Voltar a Lista de Cartórios</a>
+</div>
+
+</body>
+</html>
