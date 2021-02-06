@@ -17,6 +17,13 @@ public class Cartorio {
     @OneToMany(mappedBy = "cartorio", cascade = CascadeType.ALL)
     private List<Certidao> certidoes;
 
+    public Cartorio(){}
+
+    public Cartorio(String nome, String endereco) {
+        this.nome = nome;
+        this.endereco = endereco;
+    }
+
     public long getId() {
         return id;
     }

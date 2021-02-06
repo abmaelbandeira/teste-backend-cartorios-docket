@@ -9,6 +9,7 @@ Example developed as a test for backend vacancy at Docket
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Thymeleaf](https://www.thymeleaf.org/)
+* H2DB
 * [MySQL](https://dev.mysql.com/downloads/mysql/8.0.html) version 8.0.23 for linux
 
 
