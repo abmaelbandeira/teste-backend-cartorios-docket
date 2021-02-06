@@ -6,18 +6,18 @@ import javax.persistence.*;
 public class Certidao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long idCertidao;
     private String nome;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Cartorio cartorio;
 
-    public long getId() {
-        return id;
+    public long getIdCertidao() {
+        return idCertidao;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdCertidao(long id) {
+        this.idCertidao = id;
     }
 
     public String getNome() {
