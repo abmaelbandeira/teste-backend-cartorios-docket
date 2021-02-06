@@ -12,20 +12,21 @@
 
 <div class="container my-2">
     <h1>Cartórios</h1>
+    <hr>
     <a th:href = "@{/showNewCartorioForm}" class="btn btn-primary btn-sm mb-3">Adicionar Cartório</a>
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
             <tr>
                 <th>Nome do Cartório</th>
                 <th>Endereço</th>
-                <th>Ações</th>
+                <th class="text-center">Ações</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="cartorio : ${listCartorios}">
                 <td th:text="${cartorio.nome}"></td>
                 <td th:text="${cartorio.endereco}"></td>
-                <td>
+                <td class="text-center">
                     <a th:href="@{/detailCartorio/{id}(id=${cartorio.id})}" class="btn btn-secondary">Certidões</a>
                     <a th:href="@{/showFormForUpdate/{id}(id=${cartorio.id})}" class="btn btn-primary">Editar</a>
                     <a th:href="@{/deleteCartorio/{id}(id=${cartorio.id})}" class="btn btn-danger">Deletar</a>

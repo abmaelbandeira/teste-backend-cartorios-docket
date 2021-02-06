@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cartórios</h1>
+        <div class="mt-4">
+            <a th:href="@{/}">Voltar a Lista de Cartórios</a>
+        </div>
         <hr>
         <h2>Novo Cartório</h2>
 
@@ -17,7 +19,7 @@
             <input type="text" th:field = "*{nome}" placeholder="Nome do Cartório" class="form-control mb-4 col-4">
             <input type="text" th:field = "*{endereco}" placeholder="Endereço" class="form-control mb-4 col-4">
 
-            <button type="submit" class="btn btn-info col-2">Salvar Cartório</button>
+            <button type="submit" class="btn btn-success col-2">Salvar</button>
         </form>
     </div>
 

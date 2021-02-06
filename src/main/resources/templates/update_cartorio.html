@@ -9,8 +9,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Cartórios</h1>
-    <hr>
+
+    <div class="mt-4">
+        <a th:href="@{/}">Voltar a Lista de Cartórios</a>
+        <hr>
+    </div>
+
     <h2>Atualizar Cartório</h2>
 
     <form action="#" th:action="@{/saveCartorio}" th:object="${cartorio}" method="POST">
@@ -20,12 +24,8 @@
         <input type="text" th:field = "*{nome}" class="form-control mb-4 col-4">
         <input type="text" th:field = "*{endereco}" class="form-control mb-4 col-4">
 
-        <button type="submit" class="btn btn-info col-2">Atualizar Cartório</button>
+        <button type="submit" class="btn btn-success col-2">Atualizar Cartório</button>
     </form>
-
-    <hr>
-
-    <a th:href="@{/}">Voltar a Lista de Cartórios</a>
 </div>
 
 </body>
