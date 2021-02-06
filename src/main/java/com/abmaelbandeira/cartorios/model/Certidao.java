@@ -1,21 +1,16 @@
 package com.abmaelbandeira.cartorios.model;
 
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "cartorios")
-public class Cartorio {
-
+public class Certidao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-    private String endereco;
 
-    @OneToMany(mappedBy = "cartorio", cascade = CascadeType.ALL)
-    private List<Certidao> certidoes;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cartorio cartorio;
 
     public long getId() {
         return id;
@@ -33,11 +28,11 @@ public class Cartorio {
         this.nome = nome;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public Cartorio getCartorio() {
+        return cartorio;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setCartorio(Cartorio cartorio) {
+        this.cartorio = cartorio;
     }
 }

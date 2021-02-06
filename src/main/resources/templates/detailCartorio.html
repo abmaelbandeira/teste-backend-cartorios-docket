@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Certidões</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+</head>
+<body>
+
+    <div th:each="cartorio: ${cartorio}" class="container">
+        <a th:href="@{/}">Voltar a Lista de Cartórios</a>
+        <div class="row">
+            <p>Nome: <span th:text="${cartorio.nome}"></span></p>
+            <p>Logradouro: <span th:text="${cartorio.endereco}"></span></p>
+        </div>
+
+
+
+    <h3>Adicionar Certidão</h3>
+    <form method="POST">
+        <input class="form-control mb-4 col-4"  type="text" value="" name="nome" placeholder="Nome"/>
+        <button class="btn btn-primary btn-sm mb-3" type="submit">Adicionar Certidão</button>
+    </form>
+    <h5>Certidões</h5>
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="certidao: ${certidoes}">
+            <td th:text="${certidao.nome}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+
+</body>
+</html>

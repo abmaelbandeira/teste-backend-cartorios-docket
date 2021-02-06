@@ -15,12 +15,7 @@
 
         <form action="#" th:action="@{/saveCartorio}" th:object="${cartorio}" method="POST">
             <input type="text" th:field = "*{nome}" placeholder="Nome do Cartório" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{logradouro}" placeholder="Logradouro" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{numero}" placeholder="Número" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{bairro}" placeholder="Bairro" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{cep}" placeholder="Cep" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{cidade}" placeholder="Cidade" class="form-control mb-4 col-4">
-            <input type="text" th:field = "*{uf}" placeholder="UF" class="form-control mb-4 col-4">
+            <input type="text" th:field = "*{endereco}" placeholder="Endereço" class="form-control mb-4 col-4">
 
             <button type="submit" class="btn btn-info col-2">Salvar Cartório</button>
         </form>
